@@ -1,9 +1,12 @@
 import React from "react";
 import { motion } from "framer-motion";
 
-export default function About() {
+
+
+function About() {
   return (
-    <section className="bg-black dark:bg-gray-900 text-white py-20">
+    <div>
+      <section className="bg-black dark:bg-gray-900 text-white py-20">
       <div className="max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-center gap-12">
         <motion.div
           initial={{ opacity: 0, x: -40 }}
@@ -47,5 +50,8 @@ export default function About() {
         </motion.div>
       </div>
     </section>
-  );
+    </div>
+  )
 }
+
+export default About

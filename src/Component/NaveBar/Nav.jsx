@@ -4,7 +4,9 @@ import { HiMenu, HiX } from "react-icons/hi";
 import { motion, AnimatePresence } from "framer-motion";
 import Footer from "../footer/Footer";
 
-export default function Nav() {
+
+
+function Nav() {
   const [darkMode, setDarkMode] = useState(false);
   const [openMenu, setOpenMenu] = useState(false);
 
@@ -95,3 +97,6 @@ export default function Nav() {
     </header>
   );
 }
+
+export default Nav
+

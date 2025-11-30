@@ -2,7 +2,16 @@ import React from "react";
 import { motion } from "framer-motion";
 import { TypeAnimation } from "react-type-animation";
 
-export default function Hero() {
+
+function Hero() {
+  // Scroll function
+  const handleScroll = (id) => {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <section className="flex flex-col items-center justify-center min-h-screen bg-black dark:bg-gray-900 text-white">
       <div className="flex flex-col md:flex-row items-center justify-between w-full max-w-6xl px-6">
@@ -38,12 +47,20 @@ export default function Hero() {
             animate={{ opacity: 1 }}
             transition={{ delay: 0.8 }}
           >
-            <button className="bg-blue-500 hover:bg-blue-600 px-6 py-2 rounded-xl text-white shadow-md">
+            {/* Hire Me Button */}
+            <button
+              onClick={() => handleScroll("footer")}
+              className="bg-blue-500 hover:bg-blue-600 rounded-xl px-4 py-2 text-white"
+            >
               Hire Me
             </button>
-            <button className="border border-blue-400 text-blue-400 hover:bg-blue-500 hover:text-white px-6 py-2 rounded-xl transition shadow-md">
-              Download CV
-            </button>
+
+            {/* Download CV Button */}
+            <a href="/Erfanullahpdf.pdf" download="Erfanullah-CV">
+              <button className="border border-blue-400 text-blue-400 hover:bg-blue-500 hover:text-white px-6 py-2 rounded-xl transition shadow-md">
+                Download CV
+              </button>
+            </a>
           </motion.div>
         </motion.div>
 
@@ -66,3 +83,5 @@ export default function Hero() {
     </section>
   );
 }
+
+export default Hero

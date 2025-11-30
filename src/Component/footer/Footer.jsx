@@ -1,12 +1,14 @@
 import React from "react";
-import { FaLinkedin, FaGithub, FaEnvelope, FaWhatsapp } from "react-icons/fa";
+import { FaLinkedin, FaGithub, FaWhatsapp } from "react-icons/fa";
 import { motion } from "framer-motion";
 
-export default function Footer() {
+
+
+function Footer() {
   const icons = [
     { icon: <FaLinkedin size={28} />, link: "https://www.linkedin.com/feed/" },
     { icon: <FaGithub size={28} />, link: "https://github.com/" },
-    { icon: <FaEnvelope size={28} />, link: "mailto:erfanullahkhan71@gmail.com" },
+
     {
       icon: <FaWhatsapp size={28} />,
       link: "https://wa.me/93748948465?text=Hello%20Erfanullah!%20I%20saw%20your%20website%20and%20would%20like%20to%20connect.",
@@ -53,3 +55,6 @@ export default function Footer() {
     </footer>
   );
 }
+
+export default Footer
+

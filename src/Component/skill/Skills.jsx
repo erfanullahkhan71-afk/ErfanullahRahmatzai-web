@@ -15,8 +15,10 @@ import {
   SiFigma,
 } from "react-icons/si";
 
-export default function Skills() {
-  const skills = [
+
+
+function Skills() {
+   const skills = [
     { name: "Next.js", icon: <SiNextdotjs size={30} />, level: 90 },
     { name: "React", icon: <SiReact size={30} />, level: 85 },
     { name: "TypeScript", icon: <SiTypescript size={30} />, level: 75 },
@@ -76,3 +78,6 @@ export default function Skills() {
     </section>
   );
 }
+
+export default Skills
+
