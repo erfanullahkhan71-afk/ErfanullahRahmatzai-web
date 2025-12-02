@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { FaMoon, FaSun } from "react-icons/fa";
 import { HiMenu, HiX } from "react-icons/hi";
 import { motion, AnimatePresence } from "framer-motion";
 import Footer from "../footer/Footer";
@@ -37,7 +36,12 @@ function Nav() {
   return (
     <header className="bg-black dark:bg-gray-900 px-6 py-3 shadow-md fixed w-full z-50">
       <div className="flex items-center justify-between">
-        <img className="h-10" src="/logo.png" alt="logo" />
+      <img
+    src="/logo.jpg"
+    alt="Erfanullah Logo"
+    className="w-40 object-contain drop-shadow-lg"
+    draggable="false"
+  />
         <nav className="hidden md:block">
           <ul className="flex text-white dark:text-gray-200 gap-10">
             {links.map((link) => (

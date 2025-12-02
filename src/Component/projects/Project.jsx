@@ -1,9 +1,10 @@
-import React from "react";
+import React from 'react'
 import { motion } from "framer-motion";
 import { FiCode } from "react-icons/fi";
 
-function projects() {
- const projects = [
+
+function Project() {
+const projects = [
     {
       title: "Upskill",
       image: "/Upskill.png",
@@ -111,4 +112,4 @@ function projects() {
   );
 }
 
-export default projects
+export default Project

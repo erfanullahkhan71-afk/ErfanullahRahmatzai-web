@@ -15,13 +15,12 @@ function About() {
           className="relative"
         >
           <div className="absolute inset-0 bg-blue-500 blur-3xl opacity-20 rounded-xl"></div>
-          <motion.img
-            src="/erfan.png"
-            alt="Profile"
-            className="relative w-64 h-64 object-cover rounded-2xl shadow-xl"
-            whileHover={{ scale: 1.05, rotate: 2 }}
-            transition={{ type: "spring", stiffness: 300 }}
-          />
+         <img
+  src="/erfan.png"
+  alt="Profile"
+  className="relative w-64 h-64 object-cover rounded-2xl shadow-xl"
+/>
+
         </motion.div>
 
         <motion.div

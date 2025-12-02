@@ -3,8 +3,9 @@ import Nav from "./Component/NaveBar/Nav";
 import Hero from "./Component/Herosection/Hero";
 import About from "./Component/about/About";
 import Skills from "./Component/skill/Skills";
-import Projects from "./Component/projects/Projects";
+import Project from "./Component/projects/Project";
 import Footer from "./Component/footer/Footer";
+
 
 function App() {
   return (
@@ -20,13 +21,15 @@ function App() {
         <Skills />
       </section>
       <section id="projects">
-        <Projects />
+       <Project/>
       </section >
       <section id="footer">
 
       <Footer />
       </section>
+    
     </div>
+    
   );
 }
 

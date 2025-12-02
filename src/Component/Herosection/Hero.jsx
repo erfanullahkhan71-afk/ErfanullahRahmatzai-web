@@ -2,7 +2,6 @@ import React from "react";
 import { motion } from "framer-motion";
 import { TypeAnimation } from "react-type-animation";
 
-
 function Hero() {
   // Scroll function
   const handleScroll = (id) => {
@@ -21,15 +20,16 @@ function Hero() {
           transition={{ duration: 0.8 }}
           className="text-left"
         >
-          <h1 className="text-4xl md:text-6xl font-bold leading-tight">
+          <h1 className="text-4xl md:text-6xl font-light leading-tight text-white">
             <TypeAnimation
-              sequence={["Erfanullah", 1500, "Erfanullah Rahmatzai", 1500]}
+              sequence={["Erfanullah", 1800, "Erfanullah Rahmatzai", 1800]}
               wrapper="span"
               cursor={true}
               repeat={Infinity}
-              style={{ display: "inline-block", color: "#38bdf8" }}
+              className="text-sky-400"
             />
           </h1>
+
           <motion.p
             className="mt-4 text-gray-300 text-2xl md:text-3xl max-w-md"
             initial={{ opacity: 0 }}
@@ -70,18 +70,32 @@ function Hero() {
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.9, delay: 0.3 }}
         >
-          <div className="absolute inset-0 bg-blue-500 blur-3xl opacity-20 rounded-full"></div>
-          <motion.img
-            src="/erfan.png"
-            alt="Erfanullah Rahmatzai"
-            className="w-[330px] md:w-[450px] lg:w-[500px] relative rounded-2xl shadow-lg"
-            whileHover={{ scale: 1.05, rotate: 2 }}
-            transition={{ type: "spring", stiffness: 300 }}
-          />
+       
+        <div className="relative group">
+  <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-purple-600 to-blue-600 opacity-40 blur-xl"></div>
+<img
+  src="/ERK.jpg"
+  alt="Erfanullah Rahmatzai"
+  className="
+    relative z-10
+    w-[330px] md:w-[450px] lg:w-[500px]
+    h-[400px] object-cover
+    rounded-3xl
+    shadow-[0_0_40px_rgba(255,255,255,0.15)]
+    border border-white/20
+    transition-all duration-500
+    hover:scale-105 hover:shadow-[0_0_60px_rgba(255,255,255,0.3)]
+    backdrop-blur-xl
+    bg-white/5
+  "
+/>
+
+</div>
+
         </motion.div>
       </div>
     </section>
   );
 }
 
-export default Hero
+export default Hero;
